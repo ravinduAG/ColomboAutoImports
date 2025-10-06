@@ -1,0 +1,81 @@
+[
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
+    "Method": "GetAll",
+    "RelativePath": "api/CarModels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
+    "Method": "Create",
+    "RelativePath": "api/CarModels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ColomboAutoImports.Core.Models.CarModelModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
+    "Method": "GetById",
+    "RelativePath": "api/CarModels/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
+    "Method": "Update",
+    "RelativePath": "api/CarModels/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "ColomboAutoImports.Core.Models.CarModelModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
+    "Method": "Delete",
+    "RelativePath": "api/CarModels/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
