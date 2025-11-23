@@ -1,81 +1,122 @@
 [
   {
-    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
-    "Method": "GetAll",
-    "RelativePath": "api/CarModels",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
-    "Method": "Create",
-    "RelativePath": "api/CarModels",
+    "ContainingType": "ColomboAutoImports.Api.Controllers.EstimationController",
+    "Method": "Calculate",
+    "RelativePath": "api/Estimation/calculate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "ColomboAutoImports.Core.Models.CarModelModel",
+        "Name": "estimationRequest",
+        "Type": "ColomboAutoImports.Core.Models.EstimationRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
-    "Method": "GetById",
-    "RelativePath": "api/CarModels/{id}",
+    "ContainingType": "ColomboAutoImports.Api.Controllers.ReportsController",
+    "Method": "GetExcel",
+    "RelativePath": "api/Reports/generate-excel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleDetails",
+        "Type": "ColomboAutoImports.Core.Models.VehicleDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.ReportsController",
+    "Method": "GeneratePdf",
+    "RelativePath": "api/Reports/generate-pdf",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleDetails",
+        "Type": "ColomboAutoImports.Core.Models.VehicleDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.VehicleDetailsController",
+    "Method": "GetBrands",
+    "RelativePath": "api/VehicleDetails/brands",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ColomboAutoImports.Core.Models.BrandDto, ColomboAutoImports.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ColomboAutoImports.Api.Controllers.VehicleDetailsController",
+    "Method": "GetModels",
+    "RelativePath": "api/VehicleDetails/models/{brandId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "brandId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ColomboAutoImports.Core.Models.ModelDto, ColomboAutoImports.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
-    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
-    "Method": "Update",
-    "RelativePath": "api/CarModels/{id}",
-    "HttpMethod": "PUT",
+    "ContainingType": "ColomboAutoImports.Api.Controllers.VehicleDetailsController",
+    "Method": "GetSubModels",
+    "RelativePath": "api/VehicleDetails/submodels/{modelId}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "model",
-        "Type": "ColomboAutoImports.Core.Models.CarModelModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ColomboAutoImports.Api.Controllers.CarModelsController",
-    "Method": "Delete",
-    "RelativePath": "api/CarModels/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
+        "Name": "modelId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ColomboAutoImports.Core.Models.SubModelDto, ColomboAutoImports.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

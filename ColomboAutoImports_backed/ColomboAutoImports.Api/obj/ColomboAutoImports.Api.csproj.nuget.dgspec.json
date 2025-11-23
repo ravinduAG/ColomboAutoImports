@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj": {}
+    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj": {}
   },
   "projects": {
-    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj": {
+    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj",
+        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj",
         "projectName": "ColomboAutoImports.Api",
-        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj",
+        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Api\\ColomboAutoImports.Api.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Api\\obj\\",
+        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj"
               },
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
               },
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj"
               }
             }
           }
@@ -65,6 +65,14 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.105.0, )"
+            },
+            "EPPlus": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -74,6 +82,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
             }
           },
           "imports": [
@@ -99,14 +111,14 @@
         }
       }
     },
-    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
+    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj",
+        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj",
         "projectName": "ColomboAutoImports.Core.Services",
-        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj",
+        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\obj\\",
+        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -128,8 +140,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
               }
             }
           }
@@ -182,14 +194,14 @@
         }
       }
     },
-    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
+    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
+        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
         "projectName": "ColomboAutoImports.Core",
-        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
+        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\obj\\",
+        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -257,14 +269,14 @@
         }
       }
     },
-    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj": {
+    "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj",
         "projectName": "ColomboAutoImports.Infrastructure",
-        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj",
+        "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\ColomboAutoImports.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Infrastructure\\obj\\",
+        "outputPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -286,11 +298,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core.Services\\ColomboAutoImports.Core.Services.csproj"
               },
-              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
-                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
+              "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj": {
+                "projectPath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj"
               }
             }
           }
@@ -338,6 +350,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

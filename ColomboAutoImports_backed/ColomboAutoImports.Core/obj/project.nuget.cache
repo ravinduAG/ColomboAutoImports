@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VIL2EZ2nZRM=",
+  "dgSpecHash": "vzXM8QbmZTk=",
   "success": true,
-  "projectFilePath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
+  "projectFilePath": "E:\\Solutions\\ColomboAutoImports\\ColomboAutoImports_backed\\ColomboAutoImports.Core\\ColomboAutoImports.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",

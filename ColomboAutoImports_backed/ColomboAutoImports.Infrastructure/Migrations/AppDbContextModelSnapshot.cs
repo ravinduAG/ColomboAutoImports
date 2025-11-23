@@ -21,7 +21,7 @@ namespace ColomboAutoImports.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ColomboAutoImports.Core.Entities.CarModelEntity", b =>
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.BrandEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,15 +29,99 @@ namespace ColomboAutoImports.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("CarModels");
+                    b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.FuelTypeEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FuelTypes");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.ModelEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.ToTable("Models");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.SubModelEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("BankDocCharge")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("CIF_JPY")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("CIF_LKR")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ClearingCharges")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("DeliveryCharges")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ExchangeRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ModelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<decimal>("TotalDuty")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ModelId");
+
+                    b.ToTable("SubModels");
                 });
 
             modelBuilder.Entity("ColomboAutoImports.Core.Entities.UserEntity", b =>
@@ -56,7 +140,106 @@ namespace ColomboAutoImports.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserEntity");
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.VehicleEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ChassisId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Color")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EngineCapacity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("FuelTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SubModelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FuelTypeId");
+
+                    b.HasIndex("SubModelId");
+
+                    b.ToTable("Vehicles");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.ModelEntity", b =>
+                {
+                    b.HasOne("ColomboAutoImports.Core.Entities.BrandEntity", "Brand")
+                        .WithMany("Models")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.SubModelEntity", b =>
+                {
+                    b.HasOne("ColomboAutoImports.Core.Entities.ModelEntity", "Model")
+                        .WithMany("SubModels")
+                        .HasForeignKey("ModelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Model");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.VehicleEntity", b =>
+                {
+                    b.HasOne("ColomboAutoImports.Core.Entities.FuelTypeEntity", "FuelType")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("FuelTypeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("ColomboAutoImports.Core.Entities.SubModelEntity", "SubModel")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("SubModelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("FuelType");
+
+                    b.Navigation("SubModel");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.BrandEntity", b =>
+                {
+                    b.Navigation("Models");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.FuelTypeEntity", b =>
+                {
+                    b.Navigation("Vehicles");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.ModelEntity", b =>
+                {
+                    b.Navigation("SubModels");
+                });
+
+            modelBuilder.Entity("ColomboAutoImports.Core.Entities.SubModelEntity", b =>
+                {
+                    b.Navigation("Vehicles");
                 });
 #pragma warning restore 612, 618
         }

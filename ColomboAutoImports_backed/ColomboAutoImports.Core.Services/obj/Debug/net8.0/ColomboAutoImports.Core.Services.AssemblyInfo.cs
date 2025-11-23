@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ColomboAutoImports.Core.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+308d7bc957eddc4edcd9f61367cdb30401201ebb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ColomboAutoImports.Core.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ColomboAutoImports.Core.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
